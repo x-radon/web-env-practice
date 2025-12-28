@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Пример сайта на HTML5</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header role="banner">
+      <h1>Мой сайт</h1>
+      <nav aria-label="основная навигация">
+        <ul>
+          <li><a href="#home">Главная</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home">
+        <h2>О сайте</h2>
+        <p>Это пример семантической разметки с использованием HTML5.</p>
+      </section>
+
+      <article>
+        <h3>Пример статьи</h3>
+        <p>Здесь может быть текст статьи или новости.</p>
+      </article>
+
+      <aside aria-label="дополнительная информация">
+        <h4>Полезные ссылки</h4>
+        <ul>
+          <li><a href="#">Ссылка 1</a></li>
+          <li><a href="#">Ссылка 2</a></li>
+        </ul>
+      </aside>
+
+      <!-- Форма регистрации -->
+      <section id="form-section">
+        <h2>Форма регистрации</h2>
+        <form action="#" method="post">
+          <div>
+            <label for="name">Имя:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              minlength="2"
+              maxlength="50"
+              placeholder="Иван"
+            />
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="contact@example.ru"
+            />
+          </div>
+          <div>
+            <label for="password">Пароль:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              pattern=".{6,}"
+              title="Минимум 6 символов"
+              placeholder="********"
+            />
+          </div>
+          <div>
+            <label for="phone">Телефон:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[0-9]{10}"
+              title="10 цифр без пробелов"
+              placeholder="+7 (XXX) XXX-XX-XX"
+            />
+          </div>
+          <div>
+            <label for="city">Город:</label>
+            <select id="city" name="city" required>
+              <option value="">Выберите город</option>
+              <option value="astrakhan">Астрахань</option>
+              <option value="volgograd">Волгоград</option>
+              <option value="moscow">Москва</option>
+              <option value="saint-petersburg">Санкт-Петербург</option>
+              <option value="novosibirsk">Новосибирск</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">Сообщение:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              required
+              placeholder="Введите сообщение"
+            ></textarea>
+          </div>
+          <div>
+            <input type="checkbox" id="agree" name="agree" required />
+            <label for="agree">Согласен с правилами</label>
+          </div>
+          <div>
+            <label>Пол:</label>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Мужской</label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Женский</label>
+          </div>
+          <div>
+            <button type="submit">Отправить</button>
+            <button type="reset">Очистить</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Таблица данных -->
+      <section id="data-table-section">
+        <h2>Таблица пользователей</h2>
+        <table class="data-table">
+          <caption>
+            Список зарегистрированных пользователей
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">№</th>
+              <th scope="col">Имя</th>
+              <th scope="col">Город</th>
+              <th scope="col">Дата регистрации</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">1</td>
+              <td>Иван Иванов</td>
+              <td>Москва</td>
+              <td>2025-01-15</td>
+            </tr>
+            <tr>
+              <td scope="row">2</td>
+              <td>Анна Петрова</td>
+              <td>Санкт-Петербург</td>
+              <td>2025-02-20</td>
+            </tr>
+            <tr>
+              <td scope="row">3</td>
+              <td>Сергей Сидоров</td>
+              <td>Волгоград</td>
+              <td>2025-03-10</td>
+            </tr>
+            <tr>
+              <td scope="row">4</td>
+              <td>Мария Козлова</td>
+              <td>Новосибирск</td>
+              <td>2025-04-05</td>
+            </tr>
+            <tr>
+              <td scope="row">5</td>
+              <td>Дмитрий Орлов</td>
+              <td>Астрахань</td>
+              <td>2025-05-12</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4">Всего записей: 5</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <p>&copy; 2025 Мой сайт. Все права защищены.</p>
+      <address>
+        Email: x-radon@mail.ru<br />
+        Телефон: +7 (960) 859-XX-XX
+      </address>
+    </footer>
+  </body>
+</html>
