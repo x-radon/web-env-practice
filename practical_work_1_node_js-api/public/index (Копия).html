@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/utils.css" />
+  </head>
+  <body>
+    <h1>Добро пожаловать на сервер Express!!!</h1>
+    <div class="container">
+      <!-- Формы и элементы интерфейса -->
+      <h1>Управление пользователями</h1>
+
+      <!-- Форма создания пользователя -->
+      <h2 id="formTitle">Создать пользователя</h2>
+      <form id="form">
+        <div class="form-group">
+          <label for="firstName">Имя:</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            required
+            minlength="2"
+            maxlength="15"
+            placeholder="Иван"
+          />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Фамилия:</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            required
+            minlength="2"
+            maxlength="15"
+            placeholder="Иванов"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">E‑mail:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="contact@example.ru"
+          />
+        </div>
+        <div class="form-group">
+          <label for="role">Роль:</label>
+          <select id="role" multiple size="5" name="role" required></select>
+        </div>
+        <div class="form-group">
+          <label for="password1">Пароль:</label>
+          <input
+            type="password"
+            id="password1"
+            name="password1"
+            required
+            pattern=".{6,}"
+            title="Минимум 6 символов"
+            placeholder="********"
+          />
+          <input
+            type="password"
+            id="password2"
+            name="password2"
+            required
+            pattern=".{6,}"
+            title="Минимум 6 символов"
+            placeholder="********"
+          />
+        </div>
+        <!-- Скрытое поле для ID пользователя -->
+        <input type="hidden" id="userId" name="userId" value="" />
+        <button id = "create" type="button">Создать</button>
+      </form>
+
+      <!-- Список пользователей -->
+      <div id="users-list">
+        <h2>Список пользователей</h2>
+        <ul id="userList"></ul>
+      </div>
+
+    <!-- Подключение скриптов -->
+    <script type="module" src="/assets/js/main.js"></script>
+  </body>
+</html>

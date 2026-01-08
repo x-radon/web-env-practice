@@ -1,0 +1,120 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.transparent-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.transparent-table td {
+  padding: 20px;
+  vertical-align: top;
+}
+
+.roles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#users-list {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: max-content;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header h2,
+.header button {
+  display: inline-block;
+  vertical-align: middle; /* выравнивает по вертикали */
+  margin: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+button {
+  padding: 8px;
+  margin-top: 5px;
+}
+
+#users-list {
+  margin-top: 20px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#edit {
+  margin-right: 10px;
+}
+
+#clear {
+  display: block;
+}
+
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.user-info {
+  flex: 2;
+}
+
+.info-label {
+  font-weight: bold;
+  color: #555;
+}
+
+.user-actions {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.btn-delete img {
+  width: 20px;
+  height: 20px;
+}
