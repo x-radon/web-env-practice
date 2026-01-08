@@ -7,6 +7,7 @@
 
 Структура проекта
 
+<pre><code>
 project/
 ├── assets
 │   ├── css
@@ -31,95 +32,121 @@ project/
     │   ├── del.png
     │   └── edit.png
     └── index.html
+</code></pre>
 
-#Установка и запуск
-Требования
+# Установка и запуск
+
+## Требования
+
 Node.js (версия 14.x или выше)
 
 npm (встроенный в Node.js)
 
-Установка
-Клонируйте репозиторий:
+## Установка
 
-bash
-git clone <ссылка-на-репозиторий>
-Установите зависимости:
-
-bash
+<pre><code>bash
 npm install
-Запуск
+</code></pre>
+
+## Запуск
+
 Для запуска сервера выполните:
 
-bash
+<pre><code>bash
 npm start
+</code></pre>
+
 Сервер будет доступен по адресу:
+http://localhost:8000
 
-API документация
-Пользователи
-Создание пользователя
-POST /users
+# API документация
 
-json
+## Пользователи
+
+### Создание пользователя
+
+<pre><code>POST /users</code></pre>
+
+<pre><code>json
 {
-"firstName": "string",
-"lastName": "string",
-"email": "string",
-"password": "string",
-"role": [1, 2]
+  "firstName": "string",
+  "lastName": "string",
+  "email": "string",
+  "password": "string",
+  "role": [1, 2]
 }
-Получение списка пользователей
-GET /users
+</code></pre>
 
-Получение пользователя
-GET /users/:id
+### Получение списка пользователей
 
-Обновление пользователя
-PUT /users/:id
+<pre><code>GET /users</code></pre>
 
-json
+### Получение пользователя
+
+<pre><code>GET /users/:id</code></pre>
+
+### Обновление пользователя
+
+<pre><code>PUT /users/:id</code></pre>
+
+<pre><code>json
 {
-"firstName": "string",
-"lastName": "string",
-"email": "string",
-"password": "string",
-"role": [1, 2]
+  "firstName": "string",
+  "lastName": "string",
+  "email": "string",
+  "password": "string",
+  "role": [1, 2]
 }
-Удаление пользователя
-DELETE /users/:id
+</code></pre>
 
-Роли
-Создание роли
-POST /roles
+### Удаление пользователя
 
-json
+<pre><code>DELETE /users/:id</code></pre>
+
+## Роли
+
+### Создание роли
+
+<pre><code>POST /roles</code></pre>
+
+<pre><code>json
 {
-"name": "string"
+  "name": "string"
 }
-Получение списка ролей
-GET /roles
+</code></pre>
 
-Обновление роли
-PUT /roles/:id
+### Получение списка ролей
 
-json
+<pre><code>GET /roles</code></pre>
+
+### Обновление роли
+
+<pre><code>PUT /roles/:id</code></pre>
+
+<pre><code>json
 {
-"name": "string"
+  "name": "string"
 }
-Удаление роли
-DELETE /roles/:id
+</code></pre>
 
-Используемые технологии
-Node.js - среда выполнения
+### Удаление роли
 
-Express.js - веб-фреймворк
+<pre><code>DELETE /roles/:id</code></pre>
 
-MySQL - база данных
+# Используемые технологии
 
-bcrypt - хеширование паролей
+Node.js — среда выполнения
 
-mysql2 - драйвер MySQL
+Express.js — веб‑фреймворк
 
-Разработка
+MySQL — база данных
+
+bcrypt — хеширование паролей
+
+mysql2 — драйвер MySQL
+
+# Разработка
+
 Для разработки рекомендуется использовать:
 
 VS Code или другой редактор кода
@@ -128,7 +155,8 @@ Postman для тестирования API
 
 Nodemon для автоматического перезапуска сервера
 
-Тестирование
+# Тестирование
+
 Для тестирования API можно использовать:
 
 Postman
